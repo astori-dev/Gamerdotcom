@@ -1,0 +1,166 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Space Grotesk";
+  src: url("/assets/fonts/SpaceGrotesk.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "DM Sans";
+  src: url("/assets/fonts/DMSans.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Geist Mono";
+  src: url("/assets/fonts/GeistMono.woff2") format("woff2");
+  font-display: swap;
+}
+
+:root {
+  --background: 0.985 0.006 230;
+  --foreground: 0.16 0.02 240;
+  --card: 1 0.004 230;
+  --card-foreground: 0.16 0.02 240;
+  --popover: 1 0.004 230;
+  --popover-foreground: 0.16 0.02 240;
+  --primary: 0.68 0.14 220;
+  --primary-foreground: 0.99 0.005 220;
+  --secondary: 0.95 0.012 230;
+  --secondary-foreground: 0.28 0.02 240;
+  --muted: 0.955 0.01 230;
+  --muted-foreground: 0.5 0.02 240;
+  --accent: 0.93 0.03 220;
+  --accent-foreground: 0.45 0.13 220;
+  --destructive: 0.55 0.22 25;
+  --destructive-foreground: 0.98 0.005 25;
+  --success: 0.55 0.16 150;
+  --success-foreground: 0.98 0.005 150;
+  --warning: 0.72 0.15 85;
+  --warning-foreground: 0.25 0.05 85;
+  --border: 0.9 0.012 230;
+  --border-strong: 0.82 0.02 230;
+  --input: 0.9 0.012 230;
+  --ring: 0.68 0.14 220;
+  --surface-sunken: 0.965 0.008 230;
+  --card-hover: 0.975 0.008 230;
+  --chart-1: 0.68 0.14 220;
+  --chart-2: 0.7 0.12 245;
+  --chart-3: 0.55 0.13 200;
+  --chart-4: 0.8 0.09 190;
+  --chart-5: 0.88 0.06 210;
+  --sidebar: 0.985 0.006 230;
+  --sidebar-foreground: 0.32 0.02 240;
+  --sidebar-primary: 0.68 0.14 220;
+  --sidebar-primary-foreground: 0.99 0.005 220;
+  --sidebar-accent: 0.93 0.03 220;
+  --sidebar-accent-foreground: 0.45 0.13 220;
+  --sidebar-border: 0.9 0.012 230;
+  --sidebar-ring: 0.68 0.14 220;
+  --font-sans: "DM Sans", system-ui, sans-serif;
+  --font-serif: Georgia, serif;
+  --font-mono: "Geist Mono", monospace;
+  --font-display: "Space Grotesk", system-ui, sans-serif;
+  --radius: 1rem;
+  --shadow-x: 0px;
+  --shadow-y: 2px;
+  --shadow-blur: 12px;
+  --shadow-spread: 0px;
+  --shadow-opacity: 0.04;
+  --shadow-color: 0 0 0;
+  --shadow-2xs: 0px 2px 12px 0px hsl(0 0 0 / 0.02);
+  --shadow-xs: 0px 2px 12px 0px hsl(0 0 0 / 0.02);
+  --shadow-sm: 0px 2px 12px 0px hsl(0 0 0 / 0.04), 0px 1px 2px -1px
+    hsl(0 0 0 / 0.04);
+  --shadow: 0px 2px 12px 0px hsl(0 0 0 / 0.04), 0px 1px 2px -1px
+    hsl(0 0 0 / 0.04);
+  --shadow-md: 0px 2px 12px 0px hsl(0 0 0 / 0.05), 0px 4px 8px -1px
+    hsl(0 0 0 / 0.05);
+  --shadow-lg: 0px 4px 16px 0px hsl(0 0 0 / 0.06), 0px 8px 16px -2px
+    hsl(0 0 0 / 0.05);
+  --shadow-xl: 0px 8px 24px 0px hsl(0 0 0 / 0.07), 0px 12px 24px -2px
+    hsl(0 0 0 / 0.06);
+  --shadow-2xl: 0px 16px 40px 0px hsl(0 0 0 / 0.1);
+  --tracking-normal: -0.015em;
+  --spacing: 0.25rem;
+  --landing: 0.97 0.006 230;
+  --gradient-primary: linear-gradient(135deg, 0.72 0.14 210, 0.6 0.14 235);
+  --gradient-subtle: linear-gradient(180deg, 0.985 0.008 230, 0.96 0.01 230);
+  --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.dark {
+  --background: 0.14 0.02 240;
+  --foreground: 0.95 0.01 230;
+  --card: 0.18 0.02 240;
+  --card-foreground: 0.95 0.01 230;
+  --popover: 0.18 0.02 240;
+  --popover-foreground: 0.95 0.01 230;
+  --primary: 0.68 0.14 220;
+  --primary-foreground: 0.12 0.02 240;
+  --secondary: 0.23 0.02 240;
+  --secondary-foreground: 0.85 0.01 230;
+  --muted: 0.23 0.02 240;
+  --muted-foreground: 0.62 0.02 230;
+  --accent: 0.3 0.03 220;
+  --accent-foreground: 0.78 0.12 220;
+  --destructive: 0.6 0.22 25;
+  --destructive-foreground: 0.98 0.005 25;
+  --success: 0.65 0.16 150;
+  --success-foreground: 0.12 0.02 150;
+  --warning: 0.78 0.15 85;
+  --warning-foreground: 0.16 0.05 85;
+  --border: 0.28 0.02 240;
+  --border-strong: 0.36 0.025 240;
+  --input: 0.28 0.02 240;
+  --ring: 0.68 0.14 220;
+  --surface-sunken: 0.12 0.02 240;
+  --card-hover: 0.21 0.022 240;
+  --chart-1: 0.68 0.14 220;
+  --chart-2: 0.7 0.12 245;
+  --chart-3: 0.55 0.13 200;
+  --chart-4: 0.8 0.09 190;
+  --chart-5: 0.88 0.06 210;
+  --sidebar: 0.14 0.02 240;
+  --sidebar-foreground: 0.78 0.02 230;
+  --sidebar-primary: 0.68 0.14 220;
+  --sidebar-primary-foreground: 0.12 0.02 240;
+  --sidebar-accent: 0.23 0.02 240;
+  --sidebar-accent-foreground: 0.78 0.12 220;
+  --sidebar-border: 0.28 0.02 240;
+  --sidebar-ring: 0.68 0.14 220;
+  --font-sans: "DM Sans", system-ui, sans-serif;
+  --font-serif: Georgia, serif;
+  --font-mono: "Geist Mono", monospace;
+  --font-display: "Space Grotesk", system-ui, sans-serif;
+  --radius: 1rem;
+  --shadow-x: 0px;
+  --shadow-y: 4px;
+  --landing: 0.11 0.02 240;
+  --shadow-blur: 20px;
+  --shadow-spread: 0px;
+  --shadow-opacity: 0.2;
+  --shadow-color: 0 0 0;
+  --shadow-2xs: 0px 4px 20px 0px hsl(0 0 0 / 0.1);
+  --shadow-xs: 0px 4px 20px 0px hsl(0 0 0 / 0.1);
+  --shadow-sm: 0px 4px 20px 0px hsl(0 0 0 / 0.2), 0px 1px 2px -1px
+    hsl(0 0 0 / 0.2);
+  --shadow: 0px 4px 20px 0px hsl(0 0 0 / 0.2), 0px 1px 2px -1px hsl(0 0 0 / 0.2);
+  --shadow-md: 0px 4px 20px 0px hsl(0 0 0 / 0.2), 0px 2px 4px -1px
+    hsl(0 0 0 / 0.2);
+  --shadow-lg: 0px 4px 20px 0px hsl(0 0 0 / 0.2), 0px 4px 6px -1px
+    hsl(0 0 0 / 0.2);
+  --shadow-xl: 0px 4px 20px 0px hsl(0 0 0 / 0.2), 0px 8px 10px -1px
+    hsl(0 0 0 / 0.2);
+  --shadow-2xl: 0px 4px 20px 0px hsl(0 0 0 / 0.5);
+  --gradient-primary: linear-gradient(135deg, 0.72 0.14 210, 0.6 0.14 235);
+  --gradient-subtle: linear-gradient(180deg, 0.18 0.02 240, 0.14 0.02 240);
+  --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+body {
+  letter-spacing: var(--tracking-normal);
+}

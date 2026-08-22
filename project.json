@@ -1,0 +1,18 @@
+{
+  "overview": "MicroBlog is a decentralized microblogging app where users post short updates, follow each other, and now organize into communities and groups.",
+  "features": [
+    "Sign in with GitHub, Google, or Internet Identity",
+    "Create and browse communities",
+    "Create and join groups inside communities",
+    "Post to group-scoped feeds",
+    "Follow users, like, reply, and repost posts"
+  ],
+  "category": "social",
+  "tags": [
+    "microblogging",
+    "social",
+    "communities",
+    "groups"
+  ],
+  "last_updated": "2026-08-22T09:20:54.600Z"
+}
