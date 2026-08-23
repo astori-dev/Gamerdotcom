@@ -44912,45 +44912,45 @@ const FEED_POSTS = [
   {
     initials: "AK",
     name: "Anna K",
-    handle: "dev_anna",
+    handle: "nova_anna",
     time: "2h",
-    text: "Just deployed my first canister on ICP! The future is decentralized",
-    likes: 12,
-    replies: 3,
-    reposts: 1,
-    color: "bg-sky-600"
+    text: "Clutched a 1v4 in ranked last night. My heart rate is still recovering 🎮",
+    likes: 128,
+    replies: 24,
+    reposts: 9,
+    color: "bg-fuchsia-600"
   },
   {
     initials: "MR",
     name: "Maya R",
-    handle: "maya",
+    handle: "maya_esports",
     time: "1h",
-    text: "Your data should belong to you, not a corporation",
-    likes: 45,
-    replies: 8,
-    reposts: 12,
-    color: "bg-rose-600"
+    text: "Scrims start at 20:00. New roster synergy is looking insane this split",
+    likes: 87,
+    replies: 14,
+    reposts: 21,
+    color: "bg-cyan-600"
   },
   {
     initials: "SD",
     name: "Sam Davis",
     handle: "indie_dev",
     time: "30m",
-    text: "Building in public, day 47. Almost ready to launch",
-    likes: 7,
-    replies: 2,
-    reposts: 0,
+    text: "Shipped the new matchmaking queue. 60fps, zero lag, GG to the testers",
+    likes: 64,
+    replies: 7,
+    reposts: 12,
     color: "bg-emerald-600"
   },
   {
     initials: "CP",
     name: "Chris P",
-    handle: "chrisfoto",
+    handle: "chrisfps",
     time: "3h",
-    text: "Beautiful sunset from my balcony today #photography",
-    likes: 19,
-    replies: 0,
-    reposts: 2,
+    text: "New sensitivity settings feel like aimbot. Headshot city #esports",
+    likes: 41,
+    replies: 5,
+    reposts: 3,
     color: "bg-violet-600"
   }
 ];
@@ -45006,13 +45006,40 @@ function LandingPage() {
   const { login, isInitializing, isLoggingIn, isLoginError, loginError } = useInternetIdentity();
   const disabled = isInitializing || isLoggingIn;
   return /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "h-dvh overflow-hidden bg-landing relative flex flex-col", children: [
-    /* @__PURE__ */ jsxRuntimeExports.jsxs("header", { className: "shrink-0 px-6 sm:px-10 lg:px-16 py-5 flex items-center justify-between max-w-7xl mx-auto w-full animate-fade-up", children: [
-      /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-xl font-bold text-foreground tracking-tight", children: "MicroBlog" }),
+    /* @__PURE__ */ jsxRuntimeExports.jsx(
+      "div",
+      {
+        className: "pointer-events-none absolute inset-0 bg-gaming-grid opacity-60",
+        "aria-hidden": "true"
+      }
+    ),
+    /* @__PURE__ */ jsxRuntimeExports.jsx(
+      "div",
+      {
+        className: "pointer-events-none absolute inset-x-0 top-0 h-72 bg-gaming-radial",
+        "aria-hidden": "true"
+      }
+    ),
+    /* @__PURE__ */ jsxRuntimeExports.jsxs("header", { className: "shrink-0 px-6 sm:px-10 lg:px-16 py-5 flex items-center justify-between max-w-7xl mx-auto w-full animate-fade-up relative", children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "font-display text-2xl font-extrabold tracking-tight text-gradient-gaming", children: "Gamer" }),
       /* @__PURE__ */ jsxRuntimeExports.jsx(ThemeToggle, {})
     ] }),
-    /* @__PURE__ */ jsxRuntimeExports.jsxs("main", { className: "flex-1 flex flex-col items-center justify-center text-center px-6 min-h-0", children: [
-      /* @__PURE__ */ jsxRuntimeExports.jsx("h1", { className: "font-display text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-foreground leading-[1.05] tracking-[-0.03em] animate-fade-up-delay-1", children: "Share what matters." }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-4 sm:mt-6 text-muted-foreground text-sm sm:text-base md:text-lg max-w-sm mx-auto leading-relaxed animate-fade-up-delay-2", children: "Share thoughts, spark conversations, and own your content on the decentralized web." }),
+    /* @__PURE__ */ jsxRuntimeExports.jsxs("main", { className: "flex-1 flex flex-col items-center justify-center text-center px-6 min-h-0 relative", children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "relative w-full max-w-3xl mx-auto mb-6 sm:mb-8 animate-fade-up-delay-1", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "overflow-hidden rounded-2xl border border-border bg-gaming-glow", children: /* @__PURE__ */ jsxRuntimeExports.jsx(
+          "img",
+          {
+            src: "/assets/generated/gaming-hero.dim_1200x675.png",
+            alt: "A professional gamer at a neon-lit esports arena workstation, bathed in purple, cyan, and green glow",
+            className: "h-40 w-full object-cover sm:h-56 lg:h-64",
+            loading: "eager",
+            "data-ocid": "landing.hero_image"
+          }
+        ) }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "pointer-events-none absolute inset-0 rounded-2xl bg-gradient-to-t from-background/40 to-transparent" })
+      ] }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("h1", { className: "font-display text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-foreground leading-[1.05] tracking-[-0.03em] animate-fade-up-delay-1", children: "Level up your feed." }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-4 sm:mt-6 text-muted-foreground text-sm sm:text-base md:text-lg max-w-md mx-auto leading-relaxed animate-fade-up-delay-2", children: "Drop hot takes, share clutch plays, and own your content on the decentralized web. GG, no respawns." }),
       /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mt-5 sm:mt-8 flex w-full max-w-xs flex-col items-center gap-3 animate-fade-up-delay-3", children: [
         /* @__PURE__ */ jsxRuntimeExports.jsx(
           "button",
@@ -45020,7 +45047,8 @@ function LandingPage() {
             type: "button",
             onClick: () => login({ provider: "google" }),
             disabled,
-            className: "flex w-full items-center justify-center whitespace-nowrap rounded-full bg-foreground text-landing px-4 py-3 text-sm font-medium transition-opacity hover:opacity-90 disabled:opacity-50 disabled:cursor-not-allowed",
+            "data-ocid": "landing.google_button",
+            className: "flex w-full items-center justify-center whitespace-nowrap rounded-full bg-foreground text-landing px-4 py-3 text-sm font-medium transition-all hover:opacity-90 hover:shadow-glow focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:opacity-50 disabled:cursor-not-allowed",
             children: isLoggingIn ? /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { className: "flex items-center gap-2", children: [
               /* @__PURE__ */ jsxRuntimeExports.jsx(LoaderCircle, { className: "h-4 w-4 animate-spin" }),
               "Signing in..."
@@ -45036,7 +45064,8 @@ function LandingPage() {
             type: "button",
             onClick: () => login(),
             disabled,
-            className: "flex w-full items-center justify-center gap-2.5 whitespace-nowrap rounded-full bg-card text-card-foreground border shadow-sm px-4 py-3 text-sm font-semibold transition-colors hover:bg-secondary disabled:opacity-50 disabled:cursor-not-allowed",
+            "data-ocid": "landing.ii_button",
+            className: "flex w-full items-center justify-center gap-2.5 whitespace-nowrap rounded-full bg-card text-card-foreground border shadow-sm px-4 py-3 text-sm font-semibold transition-all hover:bg-secondary hover:border-primary/50 hover:shadow-glow focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:opacity-50 disabled:cursor-not-allowed",
             children: [
               /* @__PURE__ */ jsxRuntimeExports.jsx(InternetIdentityIcon, { className: "h-3 w-6 shrink-0" }),
               "Sign in with Internet Identity"
@@ -45049,7 +45078,8 @@ function LandingPage() {
             type: "button",
             onClick: () => login(),
             disabled,
-            className: "flex w-full items-center justify-center gap-2.5 whitespace-nowrap rounded-full bg-card text-card-foreground border shadow-sm px-4 py-3 text-sm font-semibold transition-colors hover:bg-secondary disabled:opacity-50 disabled:cursor-not-allowed",
+            "data-ocid": "landing.github_button",
+            className: "flex w-full items-center justify-center gap-2.5 whitespace-nowrap rounded-full bg-card text-card-foreground border shadow-sm px-4 py-3 text-sm font-semibold transition-all hover:bg-secondary hover:border-primary/50 hover:shadow-glow focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:opacity-50 disabled:cursor-not-allowed",
             children: [
               /* @__PURE__ */ jsxRuntimeExports.jsx(FaGithub, { className: "h-4 w-4 shrink-0" }),
               "Continue with GitHub"
@@ -45073,7 +45103,7 @@ function LandingPage() {
         ] })
       ] })
     ] }),
-    /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "shrink-0 px-4 sm:px-10 lg:px-16 max-w-3xl mx-auto w-full animate-fade-up-delay-3", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "rounded-t-2xl border border-b-0 bg-card shadow-2xl overflow-hidden", children: [
+    /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "shrink-0 px-4 sm:px-10 lg:px-16 max-w-3xl mx-auto w-full animate-fade-up-delay-3 relative", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "rounded-t-2xl border border-b-0 bg-card shadow-2xl overflow-hidden", children: [
       /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex border-b", children: [
         /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex-1 py-3 text-sm font-semibold text-center text-foreground border-b-2 border-primary", children: "For You" }),
         /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex-1 py-3 text-sm font-medium text-center text-muted-foreground", children: "Following" })
@@ -53908,7 +53938,7 @@ function AppSidebar({ onNavigate }) {
         to: "/",
         className: "flex items-center gap-3 rounded-lg px-3 py-1 transition-opacity hover:opacity-80",
         onClick: onNavigate,
-        children: /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-xl font-bold tracking-tight", children: "MicroBlog" })
+        children: /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "font-display text-xl font-extrabold tracking-tight text-gradient-gaming", children: "Gamer" })
       }
     ) }),
     /* @__PURE__ */ jsxRuntimeExports.jsx("nav", { className: "flex-1 px-3", children: /* @__PURE__ */ jsxRuntimeExports.jsx("ul", { className: "space-y-1", children: NAV_ITEMS.map((item) => {
@@ -53918,8 +53948,8 @@ function AppSidebar({ onNavigate }) {
         {
           to: item.to,
           className: cn(
-            "flex items-center gap-3 rounded-full px-4 py-3 text-[15px] transition-colors",
-            active ? "font-bold text-foreground" : "text-muted-foreground hover:bg-accent hover:text-foreground"
+            "flex items-center gap-3 rounded-full px-4 py-3 text-[15px] transition-all",
+            active ? "font-bold text-foreground bg-primary/10 neon-ring" : "text-muted-foreground hover:bg-accent hover:text-foreground hover:shadow-glow"
           ),
           onClick: onNavigate,
           children: [
@@ -57593,7 +57623,7 @@ function SearchPage() {
     ] }),
     !activeQuery ? /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex flex-col items-center px-8 py-16 text-center", children: [
       /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-primary/10", children: /* @__PURE__ */ jsxRuntimeExports.jsx(Search, { className: "h-8 w-8 text-primary" }) }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-lg font-semibold", children: "Search MicroBlog" }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-lg font-semibold", children: "Search Gamer" }),
       /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-1 text-sm text-muted-foreground", children: "Search for posts, users, or #hashtags" })
     ] }) : activeTab === "posts" ? isHashtagSearch ? /* @__PURE__ */ jsxRuntimeExports.jsx(HashtagResults, { tag: hashtagTerm }) : /* @__PURE__ */ jsxRuntimeExports.jsx(PostResults, { query: activeQuery }) : /* @__PURE__ */ jsxRuntimeExports.jsx(UserResults, { query: activeQuery })
   ] });
@@ -58838,7 +58868,7 @@ function App() {
   } else {
     content = /* @__PURE__ */ jsxRuntimeExports.jsx(AuthenticatedApp, {});
   }
-  return /* @__PURE__ */ jsxRuntimeExports.jsxs(J, { attribute: "class", defaultTheme: "light", enableSystem: true, children: [
+  return /* @__PURE__ */ jsxRuntimeExports.jsxs(J, { attribute: "class", defaultTheme: "dark", enableSystem: true, children: [
     content,
     /* @__PURE__ */ jsxRuntimeExports.jsx($e, { position: "bottom-right" })
   ] });

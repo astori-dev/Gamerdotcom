@@ -92,6 +92,7 @@ export default {
         lg: "var(--shadow-lg)",
         xl: "var(--shadow-xl)",
         "2xl": "var(--shadow-2xl)",
+        glow: "var(--shadow-glow)",
       },
       keyframes: {
         "like-pop": {
@@ -103,6 +104,10 @@ export default {
           "0%": { opacity: "0", transform: "translateY(16px)" },
           "100%": { opacity: "1", transform: "translateY(0)" },
         },
+        "glow-pulse": {
+          "0%, 100%": { opacity: "0.6" },
+          "50%": { opacity: "1" },
+        },
       },
       animation: {
         "like-pop": "like-pop 0.3s ease-out",
@@ -110,6 +115,7 @@ export default {
         "fade-up-delay-1": "fade-up 0.5s ease-out 0.1s both",
         "fade-up-delay-2": "fade-up 0.5s ease-out 0.2s both",
         "fade-up-delay-3": "fade-up 0.5s ease-out 0.3s both",
+        "glow-pulse": "glow-pulse 3s ease-in-out infinite",
       },
     },
   },

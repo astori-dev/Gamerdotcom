@@ -73,7 +73,9 @@ export function AppSidebar({ onNavigate }: AppSidebarProps) {
           className="flex items-center gap-3 rounded-lg px-3 py-1 transition-opacity hover:opacity-80"
           onClick={onNavigate}
         >
-          <span className="text-xl font-bold tracking-tight">MicroBlog</span>
+          <span className="font-display text-xl font-extrabold tracking-tight text-gradient-gaming">
+            Gamer
+          </span>
         </Link>
       </div>
 
@@ -86,10 +88,10 @@ export function AppSidebar({ onNavigate }: AppSidebarProps) {
                 <Link
                   to={item.to}
                   className={cn(
-                    "flex items-center gap-3 rounded-full px-4 py-3 text-[15px] transition-colors",
+                    "flex items-center gap-3 rounded-full px-4 py-3 text-[15px] transition-all",
                     active
-                      ? "font-bold text-foreground"
-                      : "text-muted-foreground hover:bg-accent hover:text-foreground",
+                      ? "font-bold text-foreground bg-primary/10 neon-ring"
+                      : "text-muted-foreground hover:bg-accent hover:text-foreground hover:shadow-glow",
                   )}
                   onClick={onNavigate}
                 >

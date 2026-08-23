@@ -59,45 +59,45 @@ const FEED_POSTS: MockPostData[] = [
   {
     initials: "AK",
     name: "Anna K",
-    handle: "dev_anna",
+    handle: "nova_anna",
     time: "2h",
-    text: "Just deployed my first canister on ICP! The future is decentralized",
-    likes: 12,
-    replies: 3,
-    reposts: 1,
-    color: "bg-sky-600",
+    text: "Clutched a 1v4 in ranked last night. My heart rate is still recovering 🎮",
+    likes: 128,
+    replies: 24,
+    reposts: 9,
+    color: "bg-fuchsia-600",
   },
   {
     initials: "MR",
     name: "Maya R",
-    handle: "maya",
+    handle: "maya_esports",
     time: "1h",
-    text: "Your data should belong to you, not a corporation",
-    likes: 45,
-    replies: 8,
-    reposts: 12,
-    color: "bg-rose-600",
+    text: "Scrims start at 20:00. New roster synergy is looking insane this split",
+    likes: 87,
+    replies: 14,
+    reposts: 21,
+    color: "bg-cyan-600",
   },
   {
     initials: "SD",
     name: "Sam Davis",
     handle: "indie_dev",
     time: "30m",
-    text: "Building in public, day 47. Almost ready to launch",
-    likes: 7,
-    replies: 2,
-    reposts: 0,
+    text: "Shipped the new matchmaking queue. 60fps, zero lag, GG to the testers",
+    likes: 64,
+    replies: 7,
+    reposts: 12,
     color: "bg-emerald-600",
   },
   {
     initials: "CP",
     name: "Chris P",
-    handle: "chrisfoto",
+    handle: "chrisfps",
     time: "3h",
-    text: "Beautiful sunset from my balcony today #photography",
-    likes: 19,
-    replies: 0,
-    reposts: 2,
+    text: "New sensitivity settings feel like aimbot. Headshot city #esports",
+    likes: 41,
+    replies: 5,
+    reposts: 3,
     color: "bg-violet-600",
   },
 ];
@@ -155,23 +155,46 @@ export function LandingPage() {
 
   return (
     <div className="h-dvh overflow-hidden bg-landing relative flex flex-col">
+      {/* Decorative neon grid backdrop */}
+      <div
+        className="pointer-events-none absolute inset-0 bg-gaming-grid opacity-60"
+        aria-hidden="true"
+      />
+      <div
+        className="pointer-events-none absolute inset-x-0 top-0 h-72 bg-gaming-radial"
+        aria-hidden="true"
+      />
+
       {/* Top bar */}
-      <header className="shrink-0 px-6 sm:px-10 lg:px-16 py-5 flex items-center justify-between max-w-7xl mx-auto w-full animate-fade-up">
-        <span className="text-xl font-bold text-foreground tracking-tight">
-          MicroBlog
+      <header className="shrink-0 px-6 sm:px-10 lg:px-16 py-5 flex items-center justify-between max-w-7xl mx-auto w-full animate-fade-up relative">
+        <span className="font-display text-2xl font-extrabold tracking-tight text-gradient-gaming">
+          Gamer
         </span>
         <ThemeToggle />
       </header>
 
       {/* Hero */}
-      <main className="flex-1 flex flex-col items-center justify-center text-center px-6 min-h-0">
+      <main className="flex-1 flex flex-col items-center justify-center text-center px-6 min-h-0 relative">
+        <div className="relative w-full max-w-3xl mx-auto mb-6 sm:mb-8 animate-fade-up-delay-1">
+          <div className="overflow-hidden rounded-2xl border border-border bg-gaming-glow">
+            <img
+              src="/assets/generated/gaming-hero.dim_1200x675.png"
+              alt="A professional gamer at a neon-lit esports arena workstation, bathed in purple, cyan, and green glow"
+              className="h-40 w-full object-cover sm:h-56 lg:h-64"
+              loading="eager"
+              data-ocid="landing.hero_image"
+            />
+          </div>
+          <div className="pointer-events-none absolute inset-0 rounded-2xl bg-gradient-to-t from-background/40 to-transparent" />
+        </div>
+
         <h1 className="font-display text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-foreground leading-[1.05] tracking-[-0.03em] animate-fade-up-delay-1">
-          Share what matters.
+          Level up your feed.
         </h1>
 
-        <p className="mt-4 sm:mt-6 text-muted-foreground text-sm sm:text-base md:text-lg max-w-sm mx-auto leading-relaxed animate-fade-up-delay-2">
-          Share thoughts, spark conversations, and own your content on the
-          decentralized web.
+        <p className="mt-4 sm:mt-6 text-muted-foreground text-sm sm:text-base md:text-lg max-w-md mx-auto leading-relaxed animate-fade-up-delay-2">
+          Drop hot takes, share clutch plays, and own your content on the
+          decentralized web. GG, no respawns.
         </p>
 
         <div className="mt-5 sm:mt-8 flex w-full max-w-xs flex-col items-center gap-3 animate-fade-up-delay-3">
@@ -179,7 +202,8 @@ export function LandingPage() {
             type="button"
             onClick={() => login({ provider: "google" })}
             disabled={disabled}
-            className="flex w-full items-center justify-center whitespace-nowrap rounded-full bg-foreground text-landing px-4 py-3 text-sm font-medium transition-opacity hover:opacity-90 disabled:opacity-50 disabled:cursor-not-allowed"
+            data-ocid="landing.google_button"
+            className="flex w-full items-center justify-center whitespace-nowrap rounded-full bg-foreground text-landing px-4 py-3 text-sm font-medium transition-all hover:opacity-90 hover:shadow-glow focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:opacity-50 disabled:cursor-not-allowed"
           >
             {isLoggingIn ? (
               <span className="flex items-center gap-2">
@@ -200,7 +224,8 @@ export function LandingPage() {
             type="button"
             onClick={() => login()}
             disabled={disabled}
-            className="flex w-full items-center justify-center gap-2.5 whitespace-nowrap rounded-full bg-card text-card-foreground border shadow-sm px-4 py-3 text-sm font-semibold transition-colors hover:bg-secondary disabled:opacity-50 disabled:cursor-not-allowed"
+            data-ocid="landing.ii_button"
+            className="flex w-full items-center justify-center gap-2.5 whitespace-nowrap rounded-full bg-card text-card-foreground border shadow-sm px-4 py-3 text-sm font-semibold transition-all hover:bg-secondary hover:border-primary/50 hover:shadow-glow focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:opacity-50 disabled:cursor-not-allowed"
           >
             <InternetIdentityIcon className="h-3 w-6 shrink-0" />
             Sign in with Internet Identity
@@ -210,7 +235,8 @@ export function LandingPage() {
             type="button"
             onClick={() => login()}
             disabled={disabled}
-            className="flex w-full items-center justify-center gap-2.5 whitespace-nowrap rounded-full bg-card text-card-foreground border shadow-sm px-4 py-3 text-sm font-semibold transition-colors hover:bg-secondary disabled:opacity-50 disabled:cursor-not-allowed"
+            data-ocid="landing.github_button"
+            className="flex w-full items-center justify-center gap-2.5 whitespace-nowrap rounded-full bg-card text-card-foreground border shadow-sm px-4 py-3 text-sm font-semibold transition-all hover:bg-secondary hover:border-primary/50 hover:shadow-glow focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:opacity-50 disabled:cursor-not-allowed"
           >
             <FaGithub className="h-4 w-4 shrink-0" />
             Continue with GitHub
@@ -237,7 +263,7 @@ export function LandingPage() {
       </main>
 
       {/* Feed preview */}
-      <div className="shrink-0 px-4 sm:px-10 lg:px-16 max-w-3xl mx-auto w-full animate-fade-up-delay-3">
+      <div className="shrink-0 px-4 sm:px-10 lg:px-16 max-w-3xl mx-auto w-full animate-fade-up-delay-3 relative">
         <div className="rounded-t-2xl border border-b-0 bg-card shadow-2xl overflow-hidden">
           {/* Tab bar */}
           <div className="flex border-b">

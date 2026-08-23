@@ -1,18 +1,16 @@
 {
-  "overview": "MicroBlog is a decentralized microblogging app where users post short updates, follow each other, and now organize into communities and groups.",
+  "overview": "Gamer is a decentralized social feed for gamers and esports fans to share hot takes, clutch plays, and own their content.",
   "features": [
-    "Sign in with GitHub, Google, or Internet Identity",
-    "Create and browse communities",
-    "Create and join groups inside communities",
-    "Post to group-scoped feeds",
-    "Follow users, like, reply, and repost posts"
+    "Post and share gaming content",
+    "Follow gamers and esports teams",
+    "Join communities and groups",
+    "Like, comment, and repost"
   ],
   "category": "social",
   "tags": [
-    "microblogging",
+    "gaming",
     "social",
-    "communities",
-    "groups"
+    "esports"
   ],
-  "last_updated": "2026-08-22T09:20:54.600Z"
+  "last_updated": "2026-08-22T10:12:42.868Z"
 }
